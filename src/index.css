@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes magnetic-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+  25% { transform: translate(40px, 20px) scale(1.2); opacity: 0.8; }
+  50% { transform: translate(20px, 40px) scale(0.9); opacity: 0.5; }
+  75% { transform: translate(-30px, 10px) scale(1.1); opacity: 0.7; }
+}
+
+@keyframes magnetic-2 {
+  0%, 100% { transform: translate(0, 0) scale(0.9); opacity: 0.5; }
+  25% { transform: translate(-30px, -20px) scale(1.1); opacity: 0.7; }
+  50% { transform: translate(-10px, -40px) scale(1.3); opacity: 0.9; }
+  75% { transform: translate(20px, -10px) scale(0.8); opacity: 0.4; }
+}
+
+@keyframes magnetic-3 {
+  0%, 100% { transform: translate(0, 0) scale(1.1); opacity: 0.7; }
+  25% { transform: translate(20px, -30px) scale(0.8); opacity: 0.4; }
+  50% { transform: translate(40px, 10px) scale(1.2); opacity: 0.8; }
+  75% { transform: translate(10px, 30px) scale(0.9); opacity: 0.5; }
+}
+
+@keyframes magnetic-4 {
+  0%, 100% { transform: translate(0, 0) scale(0.8); opacity: 0.4; }
+  25% { transform: translate(-40px, 10px) scale(1.2); opacity: 0.8; }
+  50% { transform: translate(-20px, -30px) scale(0.9); opacity: 0.5; }
+  75% { transform: translate(30px, -20px) scale(1.1); opacity: 0.7; }
+}
+
+@keyframes magnetic-5 {
+  0%, 100% { transform: translate(0, 0) scale(1.2); opacity: 0.8; }
+  25% { transform: translate(30px, 40px) scale(0.9); opacity: 0.5; }
+  50% { transform: translate(-20px, 20px) scale(1.1); opacity: 0.7; }
+  75% { transform: translate(-40px, -30px) scale(0.8); opacity: 0.4; }
+}
+
+@keyframes magnetic-6 {
+  0%, 100% { transform: translate(0, 0) scale(0.9); opacity: 0.5; }
+  25% { transform: translate(-20px, 30px) scale(1.1); opacity: 0.7; }
+  50% { transform: translate(30px, -20px) scale(1.3); opacity: 0.9; }
+  75% { transform: translate(10px, 40px) scale(0.8); opacity: 0.4; }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes carousel-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-fade-out {
+  animation: fade-out 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slide-up {
+  animation: slide-up 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+
+.animate-glow {
+  animation: glow 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-magnetic-1 {
+  animation: magnetic-1 12s ease-in-out infinite;
+}
+
+.animate-magnetic-2 {
+  animation: magnetic-2 15s ease-in-out infinite;
+}
+
+.animate-magnetic-3 {
+  animation: magnetic-3 18s ease-in-out infinite;
+}
+
+.animate-magnetic-4 {
+  animation: magnetic-4 20s ease-in-out infinite;
+}
+
+.animate-magnetic-5 {
+  animation: magnetic-5 16s ease-in-out infinite;
+}
+
+.animate-magnetic-6 {
+  animation: magnetic-6 14s ease-in-out infinite;
+}
+
+.animate-carousel {
+  animation: carousel-slide 15s linear infinite;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  animation: sparkle 1.5s linear infinite;
+}
+
+.magnetic-ball {
+  @apply absolute w-32 h-32 rounded-full bg-red-500/20 blur-2xl;
+}
+
+body {
+  @apply bg-black text-white;
+}
